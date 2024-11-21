@@ -1,3 +1,4 @@
+··Creación pagina web:
 sudo su
 ---------------------
 sudo yum update -y
@@ -29,7 +30,8 @@ sudo systemctl restart httpd
 sudo git config --global --add safe.directory /var/www/HTML
 ------------------------------
 
-db conection esto es otra cosa :
+Configuración base de datos 
+db :
 
 --------------------------------
 sudo apt update && sudo apt upgrade
