@@ -1,0 +1,70 @@
+sudo su
+---------------------
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+-------------
+cuando ya se tiene la pagina nos conectamos a git 
+----------------------
+sudo yum install git -y
+----------------------
+cd /var/www/html
+-------------------------
+sudo rm -rf * 
+
+----
+sudo git clone https://github.com/ChrisCueva3693/awsWeb.git
+
+--------------------
+sudo chown -R apache:apache /var/www/html
+---------------------------------
+sudo chown -R apache:apache /var/www/html  # Amazon Linux
+
+------------------
+sudo systemctl restart httpd
+
+---------------------------
+sudo git config --global --add safe.directory /var/www/HTML
+------------------------------
+
+db conection esto es otra cosa :
+
+--------------------------------
+sudo apt update && sudo apt upgrade
+-------------------------------
+sudo apt install mysql-server
+-----------------
+sudo su 
+-----------------------------
+systemctl enable MySQL
+----------------------
+sudo MySQL
+------------------------------
+select host, user, authentication_string from user;
+--------------------------------
+CREATE USER 'cris'@'%' IDENTIFIED WITH caching_sha2_password BY 'root';
+--------------------------------
+GRANT ALL PRIVILEGES ON *.* TO 'cris'@'%';
+--------------------------------
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+aquí buscamos bin-address por la nuestras que es 0.0.0.0
+
+ctrl o, enter y ctrl x
+---------------------------------
+sudo service mysql restart
+-----------------------
+sudo MySQL
+----------------------
+CREATE TABLE estudiante (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    edad INT
+);
+-----------------------------
+INSERT INTO MiTabla (nombre, edad) VALUES ('Juan', 25), ('Maria', 30);
+
+-------------------
+https://awsacademy.instructure.com/courses/101843/modules/items/9454098
